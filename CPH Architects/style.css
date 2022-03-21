@@ -1,0 +1,160 @@
+body {
+    margin: 10px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    border: 1px solid rgb(146, 184, 183);
+    border-radius: 5px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 100px;
+    min-height: 100px;
+    padding: 0 10px;
+    background-color: rgb(146, 184, 183);
+}
+
+/* img {
+    padding-top: 60px;
+    max-height: 100%;
+} */
+
+label {
+    justify-self: center;
+    align-self: center;
+    font-size: 24px;
+    color: white;
+}
+
+/* hide checkbox */
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ ul {
+    display: block;
+    justify-self: end;
+}
+
+/* Hide desktop menu by default */
+ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    font-size: 24px;
+    color: white;
+    grid-column-start: 2;
+}
+
+ul > li {
+    padding: 10px;
+}
+
+li a{
+    /* border-bottom: 2px solid white; */
+    color: white;
+ }
+
+h1 {
+    color: #707070;
+    padding-left: 20px;
+}
+
+article img{
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    justify-self: center;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    width: 260px;
+    height: 160px;
+}
+
+ /* add media query for desktop support */
+  @media screen and (min-width: 769px) { 
+        label {
+            display: none;
+        }
+        ul {
+            display: flex;
+            justify-content: flex-start;
+            align-self: center;
+            padding-right: 200px;
+        }
+        /* selects all <li> elements where the parent is an <ul> element */
+        ul > li {
+            font-size: large;
+        }
+
+        h1 {
+            margin: 30px 100px 0 50px;
+            justify-content: center
+        }
+
+        h1 {
+            padding-left: 148px;
+        }
+
+        article img{
+            width: 650px;
+            height: 300px;
+            padding-left: 200px;
+        }
+
+        img .footerImage {
+            height: 300px;
+            width: 1000px;
+            justify-self: center;
+        }
+
+        .logo {
+            padding-right: 362px;
+        }
+
+        .p-text {
+            margin: 0 280px 30px 180px;
+        }
+    }
+    
+.logo {
+    color: white;
+    text-decoration: none;
+    align-self: center;
+    justify-self: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.p-text {
+    font-family: Verdana, sans-serif;
+    color: #707070;
+    padding-left: 20px;
+    padding-right: 30px;
+    line-height: 1.6;
+    font-size: small;
+}
+
+.footer img{
+    width: 299px;
+}
+
+/* selvlavet burger menu */
+.container {
+    width: 40px;
+    height: 30px;
+    /* padding-top: 250px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* padding-right: 50px; */
+    margin: auto;
+    gap: 7.5px;
+    grid-column-start: 2;
+}
+
+.bar {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+/* burger menu slut */
